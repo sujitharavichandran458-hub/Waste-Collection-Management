@@ -1,0 +1,20 @@
+
+WASTE COLLECTION MANAGEMENT
+ENVIRONMENTAL DATA ANALYSIS REPORT
+
+Total Records: 4
+Total Waste Collected: 2080.0 KG
+Average Waste: 520.00 KG
+Maximum Waste: 850.0 KG
+Minimum Waste: 320.0 KG
+
+WASTE CATEGORY ANALYSIS:
+waste_category
+Biodegradable     1350.0
+Non-recyclable     410.0
+Recyclable         320.0
+
+COLLECTION STATUS ANALYSIS:
+status
+Completed      1170.0
+In Progress     910.0

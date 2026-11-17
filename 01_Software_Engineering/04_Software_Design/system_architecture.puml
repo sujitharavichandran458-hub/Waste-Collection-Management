@@ -1,0 +1,54 @@
+@startuml
+title EcoTrack - System Architecture
+
+skinparam componentStyle rectangle
+
+actor Administrator as Admin
+actor "Collection Staff" as Staff
+
+package "Presentation Layer" {
+    component "Thymeleaf UI" as UI
+    component "HTML / CSS" as Web
+}
+
+package "Application Layer - Spring Boot" {
+    component "Web Controller" as Controller
+    component "Area Management" as Area
+    component "Vehicle Management" as Vehicle
+    component "Waste Collection Management" as Collection
+    component "Report Management" as Report
+}
+
+package "Data Access Layer" {
+    component "Spring Data JPA Repositories" as Repo
+    database "PostgreSQL Database" as DB
+}
+
+package "Data Analysis Layer - Python" {
+    component "Python Analysis Script" as Python
+    component "Pandas" as Pandas
+    component "Matplotlib / Seaborn" as Charts
+}
+
+Admin --> UI
+Staff --> UI
+UI --> Web
+Web --> Controller
+
+Controller --> Area
+Controller --> Vehicle
+Controller --> Collection
+Controller --> Report
+
+Area --> Repo
+Vehicle --> Repo
+Collection --> Repo
+Report --> Repo
+
+Repo --> DB
+
+Python --> DB : Fetch waste data
+Python --> Pandas
+Pandas --> Charts
+
+@enduml

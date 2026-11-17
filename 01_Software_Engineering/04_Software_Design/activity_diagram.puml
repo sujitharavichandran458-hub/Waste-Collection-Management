@@ -1,0 +1,35 @@
+@startuml
+title EcoTrack - Activity Diagram
+
+start
+
+:Open EcoTrack Dashboard;
+
+:View Waste Collection Module;
+
+:Select Add Collection;
+
+:Enter Collection Details;
+
+:Select Area;
+:Select Vehicle;
+
+if (Are details valid?) then (Yes)
+    :Save Collection Details;
+    :Store Data in PostgreSQL;
+    :Display Success Message;
+else (No)
+    :Display Error Message;
+    :Correct Collection Details;
+    :Submit Again;
+endif
+
+:View Collection Records;
+
+:Update Collection Status;
+
+:Generate Reports;
+
+stop
+
+@enduml

@@ -1,0 +1,37 @@
+ECOTRACK – EFFORT ESTIMATION
+
+Project Title:
+Waste Collection Management and Environmental Data Analysis System
+
+1. INTRODUCTION
+Effort estimation is used to calculate the approximate time and work required to complete the project.
+
+2. PROJECT TASK ESTIMATION
+
+| S.No | Project Activity | Estimated Duration |
+|------|-----------------|-------------------|
+| 1 | Requirement Analysis | 2 Days |
+| 2 | System Design and Diagrams | 2 Days |
+| 3 | Database Design and Implementation | 2 Days |
+| 4 | Java Application Development | 4 Days |
+| 5 | Python Data Analysis | 2 Days |
+| 6 | Software Testing | 2 Days |
+| 7 | Documentation and Final Submission | 2 Days |
+
+3. TOTAL ESTIMATED EFFORT
+Total Estimated Duration: 16 Days
+
+4. RESOURCES REQUIRED
+- Java and Spring Boot
+- PostgreSQL Database
+- Python
+- Pandas and Matplotlib
+- Visual Studio Code
+- PlantUML
+- Computer system and internet connection
+
+5. EFFORT ESTIMATION METHOD
+The project effort is estimated based on the tasks involved, technical complexity, required tools and development activities.
+
+6. CONCLUSION
+The estimated effort provides a structured plan for completing the EcoTrack project within the available time. Actual duration may vary depending on technical issues and testing requirements.

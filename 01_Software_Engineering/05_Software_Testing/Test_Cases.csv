@@ -1,0 +1,11 @@
+Test Case ID,Module,Test Scenario,Test Input,Expected Result,Actual Result,Status
+TC01,Dashboard,Open dashboard,URL /,Dashboard should load successfully,Dashboard loaded successfully,Pass
+TC02,Areas,View area records,URL /areas,Area records should display,Area records displayed,Pass
+TC03,Vehicles,View vehicle records,URL /vehicles,Vehicle records should display,Vehicle records displayed,Pass
+TC04,Collections,View collection records,URL /collections,Collection records should display,Collection records displayed,Pass
+TC05,Collections,Add waste collection,Valid collection details,Collection should be saved,Collection saved successfully,Pass
+TC06,Collections,Update collection status,Change status,Status should be updated,Status updated successfully,Pass
+TC07,Reports,Open reports page,URL /reports,Reports should display,Reports displayed,Pass
+TC08,Database,Database connectivity,PostgreSQL connection,Application should connect to database,Connection successful,Pass
+TC09,Python Analysis,Fetch waste data,PostgreSQL records,Python should retrieve waste records,Data retrieved successfully,Pass
+TC10,Python Analysis,Generate visualizations,Waste collection dataset,Charts should be generated,Five charts generated,Pass

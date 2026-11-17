@@ -1,0 +1,50 @@
+# QUERY OPTIMIZATION
+## Waste Collection Management System – Scenario 23
+
+### Introduction
+Query optimization is the process of improving SQL query performance to retrieve data efficiently with minimum execution time and resource usage.
+
+### 1. Indexing
+Indexes help retrieve records faster without scanning the entire table.
+
+Suggested indexes for EcoTrack:
+- Index on collection_date in WASTE_COLLECTIONS.
+- Index on area_id in WASTE_COLLECTIONS.
+- Index on vehicle_id in WASTE_COLLECTIONS.
+- Index on waste_category in WASTE_COLLECTIONS.
+
+These indexes are recommendations and should be created after checking the actual database schema and query workload.
+
+### 2. Avoid Unnecessary Columns
+Instead of retrieving all columns using SELECT *, retrieve only the required columns.
+
+Example:
+SELECT waste_category, quantity_kg
+FROM waste_collections;
+
+### 3. Use WHERE Conditions
+Filtering records using WHERE reduces the number of rows processed.
+
+Example:
+SELECT *
+FROM waste_collections
+WHERE status = 'Completed';
+
+### 4. Use Aggregate Functions
+Aggregate functions such as SUM(), AVG(), MIN() and MAX() help summarize collection data.
+
+Example:
+SELECT SUM(quantity_kg)
+FROM waste_collections;
+
+### 5. Query Performance Analysis
+PostgreSQL provides EXPLAIN ANALYZE to inspect the execution plan and actual execution time of a query.
+
+Example:
+EXPLAIN ANALYZE
+SELECT *
+FROM waste_collections
+WHERE status = 'Completed';
+
+### Conclusion
+Query optimization techniques such as indexing, selecting required columns, filtering records and analyzing execution plans can improve database performance in EcoTrack.

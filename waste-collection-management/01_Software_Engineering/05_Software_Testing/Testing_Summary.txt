@@ -1,0 +1,36 @@
+# SOFTWARE TESTING SUMMARY
+## Project: EcoTrack – Waste Collection Management System
+
+### 1. Introduction
+Testing was performed to verify the major functionalities of the EcoTrack application.
+
+### 2. Modules Tested
+- Dashboard
+- Area Management
+- Vehicle Management
+- Waste Collection
+- Collection Status Update
+- Reports
+- PostgreSQL Database Connectivity
+- Python Data Analysis
+
+### 3. Testing Results
+
+| Test Case | Module | Result |
+|---|---|---|
+| TC01 | Dashboard | Pass |
+| TC02 | Areas | Pass |
+| TC03 | Vehicles | Pass |
+| TC04 | Collections | Pass |
+| TC05 | Add Collection | Pass |
+| TC06 | Update Status | Pass |
+| TC07 | Reports | Pass |
+| TC08 | Database | Pass |
+| TC09 | Python Data Fetching | Pass |
+| TC10 | Chart Generation | Pass |
+
+### 4. Testing Outcome
+The major application functionalities were verified successfully. Database connectivity and Python-based waste data analysis were also tested.
+
+### 5. Conclusion
+The EcoTrack application successfully demonstrates waste collection management, database operations, report generation and environmental data analysis.

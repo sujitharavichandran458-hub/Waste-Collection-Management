@@ -1,0 +1,111 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vehicles · EcoTrack</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments :: nav}"></div>
+
+<main>
+    <header>
+        <div>
+            <p class="eyebrow">FLEET MANAGEMENT</p>
+            <h1>Collection vehicles</h1>
+            <p class="muted">Register municipal vehicles and carrying capacity.</p>
+        </div>
+    </header>
+
+    <p class="notice" th:if="${message}" th:text="${message}"></p>
+    <p class="error" th:if="${error}" th:text="${error}"></p>
+
+    <div class="grid">
+
+        <section class="panel">
+            <h2>Add a vehicle</h2>
+
+            <form method="post" action="/vehicles" th:object="${vehicle}">
+
+                <label>
+                    Registration number
+                    <input th:field="*{registrationNumber}"
+                           placeholder="TN 56 AB 1234" required>
+                </label>
+
+                <label>
+                    Vehicle type
+                    <input th:field="*{vehicleType}"
+                           placeholder="Compactor / Truck" required>
+                </label>
+
+                <label>
+                    Capacity (tonnes)
+                    <input type="number" min="0.1" step="0.1"
+                           th:field="*{capacityTonnes}" required>
+                </label>
+
+                <label>
+                    Availability
+                    <select th:field="*{availabilityStatus}">
+                        <option value="Available">Available</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </label>
+
+                <button class="button">Save vehicle</button>
+
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Fleet register</h2>
+
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Registration</th>
+                            <th>Type</th>
+                            <th>Capacity</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="v : ${vehicles}">
+                            <td th:text="${v.id}"></td>
+                            <td th:text="${v.registrationNumber}"></td>
+                            <td th:text="${v.vehicleType}"></td>
+                            <td th:text="${v.capacityTonnes} + ' t'"></td>
+                            <td th:text="${v.availabilityStatus}"></td>
+                            <td>
+                                <form th:action="@{/vehicles/{id}/delete(id=${v.id})}"
+                                      method="post">
+                                    <button class="link danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr th:if="${#lists.isEmpty(vehicles)}">
+                            <td colspan="6" class="empty">
+                                No vehicles registered yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>EcoTrack</footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+ECOTRACK – PROJECT SCHEDULE
+
+Project Title:
+Waste Collection Management and Environmental Data Analysis System
+
+Scenario:
+Scenario 23
+
+1. PROJECT PLANNING
+- Understand project requirements.
+- Identify project modules and technologies.
+- Divide the project into development phases.
+
+2. REQUIREMENTS ANALYSIS
+- Identify functional requirements.
+- Identify non-functional requirements.
+- Prepare the Software Requirements Specification (SRS).
+- Create the Use Case Diagram.
+
+3. SYSTEM DESIGN
+- Design the system architecture.
+- Prepare the Class Diagram.
+- Prepare the Activity Diagram.
+- Prepare the Sequence Diagram.
+- Design the database using an ER Diagram.
+
+4. DATABASE DEVELOPMENT
+- Create PostgreSQL database.
+- Create required tables.
+- Define primary keys and foreign keys.
+- Execute SQL queries.
+- Perform database testing.
+
+5. APPLICATION DEVELOPMENT
+- Develop the Spring Boot application.
+- Implement Dashboard, Areas, Vehicles and Collections modules.
+- Implement Reports module.
+- Connect the application with PostgreSQL.
+- Test application functionality.
+
+6. DATA ANALYSIS
+- Connect Python with PostgreSQL.
+- Retrieve waste collection records.
+- Perform data analysis using Pandas.
+- Generate visualizations using Matplotlib.
+- Prepare the final analysis report.
+
+7. SOFTWARE TESTING
+- Prepare the Test Plan.
+- Prepare Test Cases.
+- Execute functional tests.
+- Verify database operations.
+- Prepare the Testing Summary.
+
+8. PROJECT DOCUMENTATION
+- Organize all project deliverables.
+- Verify diagrams and reports.
+- Arrange source code and SQL files.
+- Prepare final project submission.
+
+PROJECT STATUS:
+Core application development, database implementation, data analysis and major software engineering diagrams have been completed. Final documentation and submission organization are in progress.

@@ -1,0 +1,31 @@
+@startuml
+title EcoTrack - Class Diagram
+
+class Area {
+    - id : Long
+    - areaName : String
+    - location : String
+    - population : Integer
+}
+
+class Vehicle {
+    - id : Long
+    - registrationNumber : String
+    - vehicleType : String
+    - capacityTonnes : BigDecimal
+    - availabilityStatus : String
+}
+
+class WasteCollection {
+    - id : Long
+    - collectionDate : Date
+    - wasteCategory : String
+    - quantityKg : BigDecimal
+    - status : String
+    - notes : String
+}
+
+Area "1" -- "0..*" WasteCollection : has
+Vehicle "1" -- "0..*" WasteCollection : assigned to
+
+@enduml

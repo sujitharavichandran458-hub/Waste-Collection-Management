@@ -1,0 +1,39 @@
+# RELATIONAL SCHEMA
+## Waste Collection Management System – Scenario 23
+
+### 1. AREAS
+AREAS(
+- id – BIGINT (Primary Key)
+- area_name – VARCHAR
+- location – VARCHAR
+- population – INTEGER
+)
+
+### 2. VEHICLES
+VEHICLES(
+- id – BIGINT (Primary Key)
+- registration_number – VARCHAR
+- vehicle_type – VARCHAR
+- capacity_tonnes – NUMERIC
+- availability_status – VARCHAR
+)
+
+### 3. WASTE_COLLECTIONS
+WASTE_COLLECTIONS(
+- id – BIGINT (Primary Key)
+- collection_date – DATE
+- area_id – BIGINT (Foreign Key → AREAS.id)
+- vehicle_id – BIGINT (Foreign Key → VEHICLES.id)
+- waste_category – VARCHAR
+- quantity_kg – NUMERIC
+- status – VARCHAR
+- notes – VARCHAR
+)
+
+### Relationships
+
+1. AREAS (1) → (M) WASTE_COLLECTIONS
+2. VEHICLES (1) → (M) WASTE_COLLECTIONS
+
+### Conclusion
+The relational schema represents the database structure of EcoTrack. Primary keys uniquely identify records, while foreign keys connect waste collection records with their respective areas and vehicles.

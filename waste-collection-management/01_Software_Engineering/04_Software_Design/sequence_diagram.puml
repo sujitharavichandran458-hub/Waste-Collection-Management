@@ -1,0 +1,29 @@
+@startuml
+title EcoTrack - Sequence Diagram
+
+actor Administrator
+participant "Thymeleaf UI" as UI
+participant "Web Controller" as Controller
+participant "Collection Service" as Service
+participant "Repository" as Repo
+database "PostgreSQL" as DB
+
+Administrator -> UI : Open Collections
+UI -> Controller : Request collection page
+Controller -> Repo : Fetch collections
+Repo -> DB : Execute query
+DB --> Repo : Collection records
+Repo --> Controller : Return records
+Controller --> UI : Display collections
+
+Administrator -> UI : Add new collection
+UI -> Controller : Submit collection details
+Controller -> Service : Validate collection
+Service -> Repo : Save collection
+Repo -> DB : Insert record
+DB --> Repo : Save confirmation
+Repo --> Service : Saved record
+Service --> Controller : Success
+Controller --> UI : Display success message
+
+@enduml

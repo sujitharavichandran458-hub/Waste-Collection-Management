@@ -1,0 +1,9 @@
+target/
+.venv/
+__pycache__/
+*.pyc
+python/output/*
+!python/output/.gitkeep
+.idea/
+.vscode/
+.env

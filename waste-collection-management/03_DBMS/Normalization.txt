@@ -1,0 +1,38 @@
+# DATABASE NORMALIZATION
+## Waste Collection Management System – Scenario 23
+
+### Introduction
+Normalization is the process of organizing database tables to reduce data redundancy and improve data integrity.
+
+### 1. First Normal Form (1NF)
+A relation is in First Normal Form when:
+- Each column contains atomic values.
+- There are no repeating groups.
+- Each record can be uniquely identified.
+
+Application:
+The AREAS, VEHICLES and WASTE_COLLECTIONS tables store individual values in their columns. Therefore, they satisfy 1NF.
+
+### 2. Second Normal Form (2NF)
+A relation is in Second Normal Form when:
+- It satisfies 1NF.
+- Every non-key attribute depends on the whole primary key.
+- There is no partial dependency.
+
+Application:
+All three tables use a single-column primary key (id). Therefore, partial dependency does not arise, and the tables satisfy 2NF, assuming the stated functional dependencies.
+
+### 3. Third Normal Form (3NF)
+A relation is in Third Normal Form when:
+- It satisfies 2NF.
+- There are no transitive dependencies of non-key attributes on the primary key.
+
+Application:
+Area details are stored separately in AREAS.
+Vehicle details are stored separately in VEHICLES.
+Collection details are stored in WASTE_COLLECTIONS, which references area and vehicle records using their IDs.
+
+This separation avoids storing repeated area and vehicle details in every collection record.
+
+### Conclusion
+The EcoTrack database is organized into three related tables: AREAS, VEHICLES and WASTE_COLLECTIONS. Based on the current table design and assumed functional dependencies, the tables satisfy 1NF, 2NF and 3NF.

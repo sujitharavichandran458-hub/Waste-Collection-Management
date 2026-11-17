@@ -1,0 +1,48 @@
+ECOTRACK – SOFTWARE QUALITY METRICS
+
+Project Title:
+Waste Collection Management and Environmental Data Analysis System
+
+1. INTRODUCTION
+Software quality metrics are used to evaluate the reliability, functionality, performance and maintainability of the EcoTrack application.
+
+2. FUNCTIONALITY
+Metric: Functional Test Pass Rate
+Description: Percentage of successfully passed functional test cases.
+Target: 100%
+
+3. RELIABILITY
+Metric: Application Error Rate
+Description: Number of errors encountered during application testing.
+Target: Minimum possible errors.
+
+4. DATABASE QUALITY
+Metric: Data Accuracy
+Description: Correctness of stored and retrieved waste collection records.
+Target: 100% accuracy for verified test records.
+
+5. PERFORMANCE
+Metric: Response Time
+Description: Time taken by the application to respond to user requests.
+Target: Responses should be completed within an acceptable time.
+
+6. DATA ANALYSIS QUALITY
+Metric: Analysis Accuracy
+Description: Correctness of calculated waste statistics and generated charts.
+Target: Results should match verified database records.
+
+7. DOCUMENTATION QUALITY
+Metric: Documentation Completeness
+Description: Availability of required project documents, diagrams and reports.
+Target: All planned deliverables should be included.
+
+8. QUALITY ASSURANCE ACTIVITIES
+- Perform functional testing.
+- Validate database operations.
+- Verify Python analysis results.
+- Review diagrams and documentation.
+- Correct identified errors.
+- Maintain backup copies of project files.
+
+9. CONCLUSION
+Quality metrics help evaluate the overall quality of the EcoTrack system and ensure that the application meets its functional and technical requirements.

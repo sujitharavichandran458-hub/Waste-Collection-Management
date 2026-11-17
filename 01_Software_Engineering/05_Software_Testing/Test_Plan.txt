@@ -1,0 +1,77 @@
+# SOFTWARE TEST PLAN
+## Project: EcoTrack – Waste Collection Management System
+
+### 1. Introduction
+The purpose of this test plan is to verify the functionality, reliability and performance of the EcoTrack Waste Collection Management System.
+
+### 2. Testing Objectives
+- Verify dashboard functionality.
+- Test area management operations.
+- Test vehicle management operations.
+- Verify waste collection entry and status updates.
+- Check report generation.
+- Verify database connectivity.
+- Identify and correct application errors.
+
+### 3. Scope of Testing
+
+The following modules are included:
+
+1. Dashboard Module
+2. Area Management Module
+3. Vehicle Management Module
+4. Waste Collection Module
+5. Reports Module
+6. PostgreSQL Database Connectivity
+7. Python Data Analysis Module
+
+### 4. Testing Types
+
+**4.1 Functional Testing**
+Checks whether each application module performs its expected function.
+
+**4.2 Integration Testing**
+Checks the interaction between Spring Boot, PostgreSQL and the application interface.
+
+**4.3 Database Testing**
+Verifies data storage, retrieval and updates.
+
+**4.4 Validation Testing**
+Checks whether the application accepts valid inputs and handles invalid inputs appropriately.
+
+**4.5 Data Analysis Testing**
+Verifies waste data processing and chart generation using Python.
+
+### 5. Testing Environment
+
+| Component | Technology |
+|---|---|
+| Operating System | Windows |
+| Programming Language | Java |
+| Framework | Spring Boot |
+| Frontend | HTML, CSS, Thymeleaf |
+| Database | PostgreSQL |
+| Data Analysis | Python |
+| IDE | Visual Studio Code |
+| Browser | Google Chrome |
+
+### 6. Entry Criteria
+- Application source code is available.
+- Database is configured.
+- Required software dependencies are installed.
+- Application is ready for execution.
+
+### 7. Exit Criteria
+- All planned test cases are executed.
+- Critical errors are resolved.
+- Main application modules work correctly.
+- Reports and data analysis outputs are generated successfully.
+
+### 8. Testing Deliverables
+- Test Plan
+- Test Cases
+- Testing Results
+- Error and Defect Records
+
+### 9. Conclusion
+The test plan provides a structured approach to testing the EcoTrack system. Testing helps ensure that the application modules, database operations and data analysis functions work as expected.
