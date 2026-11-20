@@ -18,7 +18,7 @@ The system helps administrators manage collection areas, vehicles, waste collect
 
 \## 2. Technologies Used
 
-
+  LIVE WEBSITE LINK : https://waste-collection-management-guiu.onrender.com
 
 \- Java
 
